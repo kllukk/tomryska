@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap");
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-moz-selection {
+  background: #202581;
+  color: #eeeeee;
+}
+
+::selection {
+  background: #202581;
+  color: #eeeeee;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Roboto', sans-serif;
+  background: #eeeeee;
+}
+
+body .logo {
+  height: 200px;
+  aspect-ratio: 1;
+  margin-right: 1em;
+}
+
+body .obsah {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .obsah .nadpis {
+  font-weight: bold;
+  font-size: 2.5em;
+  text-transform: uppercase;
+}
+
+body .obsah .podnadpis {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: 1.25em;
+}
+
+body .obsah .odkazy {
+  margin-top: 0.5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 5em;
+  font-size: 1.5em;
+}
+
+body .obsah .odkazy > a {
+  text-decoration: none;
+  fill: black;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  margin-right: 0.5em;
+}
+
+body .obsah .odkazy > a:hover {
+  fill: #202581;
+  -webkit-animation: a-shake 0.3s ease-in-out forwards;
+          animation: a-shake 0.3s ease-in-out forwards;
+}
+
+body .obsah .odkazy > a:last-of-type {
+  margin-right: 0;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  body .logo {
+    margin-right: 0;
+    margin-bottom: 1em;
+  }
+  body .obsah {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body .obsah .odkazy {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@-webkit-keyframes a-shake {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  33% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  66% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+
+@keyframes a-shake {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  33% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  66% {
+    -webkit-transform: rotate(-10deg);
+            transform: rotate(-10deg);
+  }
+  100% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+}
+/*# sourceMappingURL=master.css.map */
