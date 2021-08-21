@@ -1,0 +1,105 @@
+$modra: #202581;
+$seda: #4b4b4b;
+$pozadi: #eeeeee;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::selection {
+    background: $modra;
+    color: $pozadi;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    background: $pozadi;
+
+   .logo {
+       height: 200px;
+       aspect-ratio: 1;
+       margin-right: 1em;
+   }
+   .obsah {
+       display: flex;
+       flex-direction: column;
+       align-items: flex-start;
+
+        .nadpis {
+            font-weight: bold;
+            font-size: 2.5em;
+            text-transform: uppercase;
+        }
+        .podnadpis {
+            font-weight: 100;
+            text-transform: uppercase;
+            font-size: 1.25em;
+        }
+        .odkazy {
+            margin-top: 0.5em;
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 5em;
+            font-size: 1.5em;
+
+            & > a {
+                text-decoration: none;
+                fill: black;
+                transition: 300ms;
+                margin-right: 0.5em;
+                
+                &:hover {
+                    fill: $modra;
+                    animation: a-shake 0.3s ease-in-out forwards;
+                }
+                &:last-of-type {
+                    margin-right: 0;
+                }
+            }
+        }
+   }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center; 
+
+        .logo {
+            margin-right: 0;
+            margin-bottom: 1em;
+        }
+        .obsah {
+            justify-content: center;
+            align-items: center;        
+
+            .odkazy {
+                justify-content: center;
+            }
+        }
+    }
+}
+
+@keyframes a-shake {
+    0% {
+        transform: rotate(0);
+    }
+    33% {
+        transform: rotate(10deg);
+    }
+    66% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
